@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan | Full-Stack Developer & Custom Web App Builder</title>
+  <meta name="description" content="Portfolio of Aryan - Full-Stack Developer & Custom Web App Builder crafting responsive, high-performance web applications.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="nav-logo">
+          <div class="logo-badge">A</div>
+          <span>Aryan<span class="gradient-text">.dev</span></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-cta-item">
+            <a href="#contact" class="btn-primary mobile-menu-btn">
+              <span>Let's Talk</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Audio Toggle -->
+          <button class="sound-toggle" id="soundToggle" title="Toggle Sound FX" aria-label="Toggle Sound FX">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+
+          <!-- Desktop CTA -->
+          <a href="#contact" class="nav-cta-btn">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Open mobile menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status">
+              <span class="status-dot"></span>
+              <span>Available for Custom Web Apps & Freelance Projects</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Crafting Exceptional <br class="desktop-br">
+              <span class="gradient-text">Digital Products &amp;</span> <br class="desktop-br">
+              Custom Web Applications
+            </h1>
+
+            <div class="hero-tagline-wrapper">
+              <p class="hero-tagline">
+                Hi, I'm <strong class="text-white">Aryan</strong> — <span id="typewriter" class="typewriter-text">Full-Stack Developer</span>
+              </p>
+            </div>
+
+            <p class="hero-description">
+              I build scalable, responsive, and high-performance custom web applications with pixel-perfect design, clean architecture, and modern full-stack workflows.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn-primary">
+                <span>View Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="http://www.fiverr.com/s/61YLpVR" target="_blank" rel="noopener noreferrer" class="btn-fiverr">
+                <span class="fiverr-pill-icon">fi</span>
+                <span>Hire on Fiverr</span>
+              </a>
+              <a href="#contact" class="btn-outline">
+                <span>Contact Me</span>
+                <i class="fa-regular fa-paper-plane"></i>
+              </a>
+              <a href="#terminal" class="btn-outline">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Terminal</span>
+              </a>
+            </div>
+
+            <!-- Professional Highlights -->
+            <div class="hero-highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div class="highlight-info">
+                  <h4>100% Responsive UI</h4>
+                  <p>Flawless across phones, tablets & desktops</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="highlight-info">
+                  <h4>Clean Code Architecture</h4>
+                  <p>Maintainable, scalable & documented</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                <div class="highlight-info">
+                  <h4>Fast Turnaround</h4>
+                  <p>Rapid development & agile delivery</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="highlight-info">
+                  <h4>Modern Tech Stack</h4>
+                  <p>Latest frontend, backend & API standards</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase Card -->
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="profile-avatar-wrapper">
+                <img src="profile.jpg" alt="Aryan" class="profile-avatar">
+                <div class="floating-tech-badge badge-1" title="React / Modern Web">
+                  <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="floating-tech-badge badge-2" title="Modern JavaScript">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <div class="floating-tech-badge badge-3" title="Python">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+              </div>
+
+              <div class="hero-card-info">
+                <h2 class="hero-card-name">Aryan</h2>
+                <p class="hero-card-role">Full-Stack Developer & Web App Builder</p>
+
+                <div class="hero-card-tech">
+                  <span class="tech-pill">Web Development</span>
+                  <span class="tech-pill">Custom Web Apps</span>
+                  <span class="tech-pill">Modern JavaScript</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">API Integration</span>
+                </div>
+
+                <div class="hero-card-socials">
+                  <!-- GitHub -->
+                  <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer" class="social-icon-btn github-btn" title="GitHub - AryanNotFound404">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <!-- X (Twitter) -->
+                  <a href="https://x.com/AryanNotPresent" target="_blank" rel="noopener noreferrer" class="social-icon-btn twitter-btn" title="X (Twitter) - @AryanNotPresent">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <!-- Fiverr -->
+                  <a href="http://www.fiverr.com/s/61YLpVR" target="_blank" rel="noopener noreferrer" class="social-icon-btn fiverr-btn" title="Fiverr Profile">
+                    <span class="fiverr-mark">fi</span>
+                  </a>
+                  <!-- Gmail / Direct Email -->
+                  <a href="mailto:notevelyt@gmail.com" class="social-icon-btn email-btn" title="Direct Email - notevelyt@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE BRAND STRIP -->
+    <section class="marquee-section">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="marquee-item"><i class="fa-solid fa-code"></i> Web Development</div>
+          <div class="marquee-item"><i class="fa-brands fa-html5"></i> HTML5 & CSS3</div>
+          <div class="marquee-item"><i class="fa-brands fa-js"></i> Modern JavaScript</div>
+          <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+          <div class="marquee-item"><i class="fa-solid fa-network-wired"></i> API Integration</div>
+          <div class="marquee-item"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Refactoring</div>
+          <div class="marquee-item"><i class="fa-brands fa-react"></i> React & Next.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-git-alt"></i> Git DevOps</div>
+        </div>
+        <div class="marquee-track">
+          <div class="marquee-item"><i class="fa-solid fa-code"></i> Web Development</div>
+          <div class="marquee-item"><i class="fa-brands fa-html5"></i> HTML5 & CSS3</div>
+          <div class="marquee-item"><i class="fa-brands fa-js"></i> Modern JavaScript</div>
+          <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+          <div class="marquee-item"><i class="fa-solid fa-network-wired"></i> API Integration</div>
+          <div class="marquee-item"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Refactoring</div>
+          <div class="marquee-item"><i class="fa-brands fa-react"></i> React & Next.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+          <div class="marquee-item"><i class="fa-brands fa-git-alt"></i> Git DevOps</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Discover Me</span>
+          <h2 class="section-title">Passionate About Engineering & Design</h2>
+          <p class="section-subtitle">Bridging the gap between sleek visual design and robust full-stack engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Custom solutions designed specifically for your goals.</h3>
+            <p>
+              I specialize in turning conceptual ideas into high-performance web products. Whether you need a brand-new custom web application, a modern UI/UX refactor for your existing platform, or seamless third-party API integration, I ensure every detail is refined and robust.
+            </p>
+            <div class="highlight-box">
+              "Great software combines clean, scalable architecture with an effortless and delightful user experience."
+            </div>
+            <p>
+              With strong proficiencies across modern frontend paradigms, Python, and JavaScript backends, I bring agility, precision, and reliable communication to every build.
+            </p>
+          </div>
+
+          <div class="about-cards-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <h4>Custom Web Applications</h4>
+              <p>Tailored web systems built from scratch with clean code, secure workflows, and modern stacks.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h4>UI/UX Refactoring</h4>
+              <p>Modernizing outdated designs with fluid layouts, responsive micro-animations, and glassmorphic polish.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-plug"></i></div>
+              <h4>API Integration</h4>
+              <p>Connecting payment gateways, authentication providers, cloud storage, and automated webhooks.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Fast & Responsive</h4>
+              <p>Tested rigorously on mobile, tablet, and desktop devices for ultra-fast load times and smooth 60fps feel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills" style="background: rgba(18, 20, 31, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-code"></i> Technical Arsenal</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Focused skill set curated for building production-grade web applications and high-impact digital experiences.</p>
+        </div>
+
+        <!-- Featured Requested Skills Badges -->
+        <div class="featured-skills-strip">
+          <span class="hero-skill-badge"><i class="fa-solid fa-code"></i> Web Development</span>
+          <span class="hero-skill-badge"><i class="fa-solid fa-laptop-code"></i> Custom Web Applications</span>
+          <span class="hero-skill-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="hero-skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="hero-skill-badge"><i class="fa-brands fa-js"></i> Modern JavaScript</span>
+          <span class="hero-skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="hero-skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Refactoring</span>
+          <span class="hero-skill-badge"><i class="fa-solid fa-network-wired"></i> API Integration</span>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Category 1: Frontend & UI/UX -->
+          <div class="skill-category-card">
+            <h3 class="category-title">
+              <i class="fa-solid fa-palette"></i> Frontend & UI/UX Design
+            </h3>
+            <div class="skill-items-wrap">
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>HTML5 & CSS3</span> <span>98%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="98%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Modern JavaScript (ES6+)</span> <span>94%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="94%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>UI/UX Refactoring & Responsive Layouts</span> <span>96%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="96%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>React & Modern Frameworks</span> <span>90%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="90%"></div></div>
+              </div>
+            </div>
+            <div class="skill-badges-cloud">
+              <span class="cloud-badge">Flexbox & Grid</span>
+              <span class="cloud-badge">Tailwind CSS</span>
+              <span class="cloud-badge">Micro-interactions</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend, Python & APIs -->
+          <div class="skill-category-card">
+            <h3 class="category-title">
+              <i class="fa-solid fa-server"></i> Backend, Python & APIs
+            </h3>
+            <div class="skill-items-wrap">
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Python Development</span> <span>92%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Custom Web Applications</span> <span>95%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>RESTful API Integration</span> <span>94%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="94%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Database Integration (SQL/NoSQL)</span> <span>88%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+              </div>
+            </div>
+            <div class="skill-badges-cloud">
+              <span class="cloud-badge">FastAPI / Flask</span>
+              <span class="cloud-badge">Node.js</span>
+              <span class="cloud-badge">JSON / Webhooks</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Best Practices -->
+          <div class="skill-category-card">
+            <h3 class="category-title">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Workflow & Best Practices
+            </h3>
+            <div class="skill-items-wrap">
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Git & Version Control</span> <span>92%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Cross-Browser Compatibility</span> <span>98%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="98%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Performance Optimization</span> <span>94%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="94%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta"><span>Clean Code Architecture</span> <span>96%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="96%"></div></div>
+              </div>
+            </div>
+            <div class="skill-badges-cloud">
+              <span class="cloud-badge">EmailJS / Gmail</span>
+              <span class="cloud-badge">Vercel Deploy</span>
+              <span class="cloud-badge">Figma to Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Real-World Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications built with clean architecture, responsive layouts, and seamless communication functionality.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="python">Python & WebSockets</button>
+          <button class="filter-btn" data-filter="web">Web Platforms</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX & Frontend</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Secret Chat App -->
+          <div class="project-card" data-category="python web">
+            <div class="project-img-wrapper">
+              <img src="project-chat.jpg" alt="Secret Chat App" class="project-img">
+              <div class="project-overlay"></div>
+              <span class="project-category-tag">Python &amp; WebSockets</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Secret Chat App</h3>
+              <p class="project-desc">
+                A secure, real-time private messaging application with an intuitive UI and seamless communication functionality.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">WebSockets</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://aryannotfound404.github.io/purplechat4u/" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                  <i class="fa-brands fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: School Nostalgia -->
+          <div class="project-card" data-category="web uiux">
+            <div class="project-img-wrapper">
+              <img src="project-school.jpg" alt="School Nostalgia" class="project-img">
+              <div class="project-overlay"></div>
+              <span class="project-category-tag">Private Platform</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">School Nostalgia</h3>
+              <p class="project-desc">
+                A modern educational web portal engineered for seamless school interaction, academic management, and clean institutional UI/UX.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Responsive Web Design</span>
+              </div>
+              <div class="project-links">
+                <button type="button" class="btn-project-live btn-private-live" id="schoolPrivateBtn" title="Private Platform - Click for info">
+                  <i class="fa-solid fa-lock"></i> Live Demo
+                </button>
+                <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                  <i class="fa-brands fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Custom Developer Portfolio -->
+          <div class="project-card" data-category="uiux web">
+            <div class="project-img-wrapper">
+              <img src="project-portfolio.jpg" alt="Developer Portfolio" class="project-img">
+              <div class="project-overlay"></div>
+              <span class="project-category-tag">UI/UX &amp; Portfolio</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Custom Developer Portfolio</h3>
+              <p class="project-desc">
+                A high-performance, fully-responsive web application portfolio showcasing modern software tools, custom code refactoring, and AI-assisted engineering workflows.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Modern JS</span>
+                <span class="stack-tag">CSS Grid/Flexbox</span>
+                <span class="stack-tag">UI/UX Refactoring</span>
+                <span class="stack-tag">API Integration</span>
+              </div>
+              <div class="project-links">
+                <a href="https://aryannotfound404.github.io/Aryan/" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                  <i class="fa-brands fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / JOURNEY -->
+    <section class="section" id="experience" style="background: rgba(18, 20, 31, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-timeline"></i> Development Track</span>
+          <h2 class="section-title">Experience & Journey</h2>
+          <p class="section-subtitle">Consistent focus on crafting custom web applications and reliable client deliverables.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Current</span>
+              <h4 class="timeline-role">Full-Stack Developer & Web App Builder</h4>
+              <p class="timeline-company">Fiverr Verified Freelancer & Independent Projects</p>
+              <p class="timeline-desc">
+                Building responsive custom web applications, integrating REST APIs, implementing UI/UX refactoring, and delivering production code with fast turnaround.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Specialization</span>
+              <h4 class="timeline-role">Custom Web Applications & APIs</h4>
+              <p class="timeline-company">Full-Stack Solutions</p>
+              <p class="timeline-desc">
+                Developed robust Python backend services, integrated third-party APIs (EmailJS, REST, Webhooks), and structured clean database schemas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Foundation</span>
+              <h4 class="timeline-role">Modern Frontend & UI Architecture</h4>
+              <p class="timeline-company">Web Development</p>
+              <p class="timeline-desc">
+                Engineered accessible, pixel-perfect responsive user interfaces using HTML5, modern CSS3, and JavaScript with 100% mobile compatibility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVELOPER TERMINAL -->
+    <section class="section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-terminal"></i> Interactive Shell</span>
+          <h2 class="section-title">Developer Terminal</h2>
+          <p class="section-subtitle">Interact directly with Aryan's shell. Type <span class="gradient-text">help</span> to begin.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="term-btn term-close"></span>
+              <span class="term-btn term-min"></span>
+              <span class="term-btn term-max"></span>
+            </div>
+            <span class="terminal-title">bash — aryan@portfolio: ~</span>
+            <div style="width: 48px;"></div>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="term-line">Welcome to Aryan's interactive CLI v2.6.0.</div>
+            <div class="term-line">Type <span class="term-cmd-highlight">help</span> to view commands or <span class="term-cmd-highlight">sudo hire</span>.</div>
+            <div class="terminal-input-row">
+              <span class="term-prompt-prefix">aryan@portfolio:~$</span>
+              <input type="text" id="terminalInput" class="terminal-input" placeholder="try typing 'fiverr', 'skills', or 'contact'..." autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Optimized for EmailJS / Gmail) -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Build Something Great</h2>
+          <p class="section-subtitle">Have a project, need a custom web application, or want a UI/UX refactoring? Send a message directly below or hire me on Fiverr.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Direct Contact</h3>
+            <p class="contact-info-desc">
+              Whether you need rapid development, a custom web app, or an API integration, I am available to help bring your product to life.
+            </p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-detail">
+                  <h5>Direct Email</h5>
+                  <a href="mailto:notevelyt@gmail.com">notevelyt@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon fiverr-icon-bg">
+                  <span class="fiverr-mark-sm">fi</span>
+                </div>
+                <div class="contact-detail">
+                  <h5>Fiverr Profile</h5>
+                  <a href="http://www.fiverr.com/s/61YLpVR" target="_blank" rel="noopener noreferrer">fiverr.com/s/61YLpVR</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="contact-detail">
+                  <h5>GitHub</h5>
+                  <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer">github.com/AryanNotFound404</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="contact-detail">
+                  <h5>X (Twitter)</h5>
+                  <a href="https://x.com/AryanNotPresent" target="_blank" rel="noopener noreferrer">@AryanNotPresent</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Column (Optimized for EmailJS / Gmail) -->
+          <div class="contact-form-card">
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="user_name">Your Name</label>
+                  <input 
+                    type="text" 
+                    id="user_name" 
+                    name="from_name" 
+                    class="form-input" 
+                    placeholder="e.g. John Doe" 
+                    required
+                  >
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="user_email">Your Email</label>
+                  <input 
+                    type="email" 
+                    id="user_email" 
+                    name="reply_to" 
+                    class="form-input" 
+                    placeholder="e.g. john@example.com" 
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="user_message">Your Message</label>
+                <textarea 
+                  id="user_message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Tell me about your custom web app, timeline, and goals..." 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" id="send-btn" class="btn-primary btn-submit">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-text">Message delivered! Aryan will get back to you shortly.</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <div class="logo-badge">A</div>
+            <span>Aryan<span class="gradient-text">.dev</span></span>
+          </a>
+          <p>
+            Building high-performance custom web applications with clean code architecture, responsive UI, and seamless API integrations.
+          </p>
+          <div class="hero-card-socials" style="justify-content: flex-start;">
+            <a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer" class="social-icon-btn github-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/AryanNotPresent" target="_blank" rel="noopener noreferrer" class="social-icon-btn twitter-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="http://www.fiverr.com/s/61YLpVR" target="_blank" rel="noopener noreferrer" class="social-icon-btn fiverr-btn" title="Fiverr"><span class="fiverr-mark">fi</span></a>
+            <a href="mailto:notevelyt@gmail.com" class="social-icon-btn email-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills & Tech Stack</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#experience">Development Track</a></li>
+            <li><a href="#terminal">Terminal CLI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="http://www.fiverr.com/s/61YLpVR" target="_blank" rel="noopener noreferrer">Order on Fiverr</a></li>
+            <li><a href="mailto:notevelyt@gmail.com">notevelyt@gmail.com</a></li>
+            <li><a href="https://github.com/AryanNotFound404" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+            <li><a href="https://x.com/AryanNotPresent" target="_blank" rel="noopener noreferrer">X (Twitter) Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Aryan. All rights reserved. Crafted with clean architecture & modern web standards.</p>
+        <a href="#home" class="back-to-top" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Private Website Modal -->
+  <div class="modal-overlay" id="privateModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-icon"><i class="fa-solid fa-lock"></i></div>
+      <h3 class="modal-title">Private Website</h3>
+      <p class="modal-desc">
+        <strong>School Nostalgia</strong> is a private institutional memory portal created for students and authorized members. Public live access is restricted to protect confidential memories.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary modal-close-btn" id="modalCloseBtn">
+          <span>Understood</span>
+        </button>
+        <a href="#contact" class="btn-outline modal-contact-btn" id="modalContactBtn">
+          <span>Contact Aryan</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
